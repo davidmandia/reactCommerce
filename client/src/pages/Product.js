@@ -20,7 +20,7 @@ export default function Product() {
 const price = formatProductPrice(product)
 
   return (
-    <section className="text-gray-400 bg-gray-900 body-font overflow-hidden">
+    <section className="text-gray-400  body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
           <img
@@ -38,7 +38,7 @@ const price = formatProductPrice(product)
             <p className="leading-relaxed">{product.description_long}</p>
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5"></div>
             <div className="flex">
-              <span className="title-font font-medium text-2xl text-white">
+              <span className="title-font font-medium text-2xl text-black">
                 {price}
               </span>
 

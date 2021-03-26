@@ -19,7 +19,11 @@ export default function ProductList() {
 
   if(isLoading) return <LoadingSpinner />
 
-  return (<div>{products.map(product => (
+  
+
+
+
+  return (<div className='row d-flex justify-content-around flex-wrap'>{products.map(product => (
     <ProductItem key={product.id} product={product} />
   ))}
   </div>);

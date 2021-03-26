@@ -17,7 +17,7 @@ const stripePromise = loadStripe('pk_test_51IZ2KLJqqMn5DVokGFoL16prZK62KLDIGU2MB
 
 
 function App() {
-  return (
+  return (<div style={{backgroundColor: "white"}}>
     <QueryClientProvider client={queryClient}>
       <CartProvider
       mode="checkout-session"
@@ -34,6 +34,7 @@ function App() {
     </BrowserRouter>
     </CartProvider>
     </QueryClientProvider>
+    </div>
   )
 }
 

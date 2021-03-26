@@ -4,7 +4,7 @@ import CartModal from './CartModal';
 import { CartIcon } from "./Icons";
 
 export default function CartSummary() {
-  const { formattedTotalPrice, cartCount } = useShoppingCart()
+  const { totalPrice, cartCount } = useShoppingCart()
   const [ isOpen, setOpen] = React.useState(false)
   const toggleModal = () => setOpen(!isOpen);
   return (
@@ -12,7 +12,7 @@ export default function CartSummary() {
       <nav onClick={toggleModal} className="md:ml-auto flex flex-wrap items-center text-base justify-center">
         <span className="mr-5 hover:text-white flex items-center">
           <CartIcon />
-          <span className="ml-3">{formattedTotalPrice} ({cartCount})</span>
+          <span className="ml-3">{Math.floor(totalPrice / 100)} £ ({cartCount})</span>
         </span>
       </nav>
       <CartModal  isOpen={isOpen} toggleModal={toggleModal} />

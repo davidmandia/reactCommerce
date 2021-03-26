@@ -6,28 +6,24 @@ import formatProductPrice from '../utils/formatProductPrice';
 function ProductItem({product}) {
     const price = formatProductPrice(product)
     return (
-      <div className="p-4 md:w-1/3">
-        <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
-          <Link to={`/${product.id}`}>
+      <div className=" col-md-4 col-sm-6">
+        <div className="card">
+        <Link to={`/${product.id}`}>
           <img
-            className="lg:h-96 md:h-36 w-full object-cover object-center"
+            className="card-img-top img-fluid"
             src={product.image}
             alt={product.name}
           />
           </Link>
-          <div className="p-6">
-            <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
-              {product.category}
-            </h2>
-            <h1 className="title-font text-lg font-medium text-white mb-3">
-              {product.name}
-            </h1>
-            <p className="leading-relaxed mb-3">{product.description}</p>
-            <div className="flex items-center flex-wrap ">
+  <div className="card-body">
+    <h5 className="card-title">{product.name}</h5>
+    <h6 className="card-subtitle">{product.category}</h6>
+    <p className="card-text">{product.description}.</p>
+    <div className="card-link"><div className="flex items-center flex-wrap ">
             <Link to={`/${product.id}`}>
               <span className="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">
                 See More
-                <svg
+                {/* <svg
                   fill="none"
                   stroke="currentColor"
                   strokeLinecap="round"
@@ -37,16 +33,22 @@ function ProductItem({product}) {
                   viewBox="0 0 24 24"
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
+                </svg> */}
               </span>
               </Link>
-              <span className="text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-lg pr-3 py-1 border-gray-800 font-bold">
-                {price}
-              </span>
+              
             </div>
-          </div>
-        </div>
-      </div>
+            <span className="text-white-500 font-bold">
+                {price}
+              </span>    
+    
+  </div>
+</div>
+</div>
+</div>        
+          
+          
+      
     );
   }
 

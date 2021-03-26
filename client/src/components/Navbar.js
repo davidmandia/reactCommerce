@@ -12,7 +12,7 @@ export default function Navbar() {
           <span className="flex items-center justify-center ml-3 text-xl">
             <LogoIcon />
             <span className="inline-block py-1 px-2 text-white text-2xl font-medium tracking-wider">
-              React Shopper
+              David Mandia React shopping
             </span>
           </span>
         </Link>
